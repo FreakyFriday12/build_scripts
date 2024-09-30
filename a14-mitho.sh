@@ -1,12 +1,14 @@
 rm -rf .repo/local_manifests/  && # Clone local_manifests repository
-repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen --git-lfs --depth=1 
-git clone https://github.com/FreakyFriday12/Local-Manifest --depth 1 -b Voltage-14 .repo/local_manifests && 
+repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs
+git clone https://github.com/FreakyFriday12/Local-Manifest --depth 1 -b Voltage-14 .repo/local_manifests  
 # Sync the repositories
-/opt/crave/resync.sh  && 
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 # Set up build environment
-export BUILD_USERNAME=FreakyFriday12 
-export BUILD_HOSTNAME=crave 
-source build/envsetup.sh
+export EVO_BUILD_TYPE=Unofficial
+echo 'export EVO_BUILD_TYPE=Unofficial' >> ~/.bashrc
+source ~/.bashrc
+. build/envsetup.sh
  
 # Build the ROM
-breakfast earth eng && make installclean && mka bacon
+lunch lineage_earth-userdebug
+m evolution
