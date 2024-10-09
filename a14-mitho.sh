@@ -13,5 +13,6 @@ export BUILD_USERNAME=Ditya
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=1
 export TZ=Asia/Makassar
-lunch cipher_earth-userdebug #edit this according to your rom build commands
-mka cipher #also edit this if needed
+# Choose a target device 
+lunch cipher_earth-ap2a-userdebug
+mka bacon -j$(nproc --all) #also edit this if needed
