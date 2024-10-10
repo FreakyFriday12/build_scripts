@@ -14,5 +14,5 @@ export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=1
 export TZ=Asia/Makassar
 # Choose a target device 
-lunch ciper_earth-userdebug
+lunch ciper_earth-ap1a-userdebug
 mka bacon -j$(nproc --all) #also edit this if needed
