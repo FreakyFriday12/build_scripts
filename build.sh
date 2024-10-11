@@ -10,11 +10,9 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
 export BUILD_USERNAME=Ditya 
 export BUILD_HOSTNAME=crave
-export PROJECTFOLDER="/crave-devspaces/Lineage21"
-export PROJECTID="72"
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=1
 export TZ=Asia/Makassar
 # Choose a target device 
-source build/envsetup.sh
-lunch xdroid_earth-userdebug
+. build/envsetup.sh
+lunch xdroid_earth-ap1a-userdebug
 make xd -j$(nproc --all)
