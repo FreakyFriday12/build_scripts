@@ -14,5 +14,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=1
 export TZ=Asia/Makassar
 # Choose a target device 
 . build/envsetup.sh
-launch aosp_earth-userdebug
-mka bacon
+lunch aosp_earth-userdebug || lunch aosp_earth-ap2a-userdebug || breakfast earth userdebug
+make bacon 
