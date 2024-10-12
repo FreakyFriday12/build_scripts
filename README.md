@@ -1,4 +1,4 @@
 # build_scripts
 ```
-curl https://raw.githubusercontent.com/PhantomEnigma/build_scripts/main/a14-mitho.sh | bash
+crave run --no-patch -- "curl https://raw.githubusercontent.com/FreakyFriday12/build_scripts/main/build.sh | bash"
 ```
